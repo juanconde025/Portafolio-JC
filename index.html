@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" href="assets/icons/logo.png" type="image/x-icon">  
+    <title>Juan Conde | Desarrollador Junior Backend</title>
+</head>
+<body>
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <img src="assets/icons/Logo gris.png" alt="">
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CV</a></li>
+                    <li><a href="#proyectos" onclick="seleccionar()">PROYECTOS</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="assets/images/hero.jpg" alt="">
+            </div>
+            <h1>Hi i'm Juan</h1>
+            <h2>Desarrollador Backend Junior</h2>
+        </div>
+    </section>  
+
+    <section id="sobremi" class="sobremi">
+        <h2 class="bio-titulo">Sobre Mí</h2>
+        <p class="bio-texto">
+            Veo el sector tecnológico como un puente para la creación de nuevas ideas y aportes claves en diferentes campos de la sociedad. Me enfoco hacia el trabajo en equipo y la resolución de problemas generando así un análisis continuo y una interpretación clave para obtener resultados efectivos en los diversos proyectos en los que trabajo.
+        </p>
+        <button>
+            Descargar CV <i class="fa-solid fa-download"></i>
+            <span class="overlay"></span>
+        </button>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <div class="fila">
+            <div class="col">
+                <div class="skill">
+                    <span>Python</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>100%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>100%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Java</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>30%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>MySQL</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>100%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>HTML</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>100%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="skill">
+                    <span>CSS</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>100%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Git</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>100%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Arduino</span>
+                    <div class="barra-skill">
+                        <div class="progreso">
+                            <span>90%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="proyectos" id="proyectos">
+        <h2 class="titulo-de-proyectos">Proyectos</h2>
+        <div class="contenedor-de-proyectos">
+          <div class="contenedor-de-proyectos tarjeta-de-proyectos">
+            <img
+              src="assets/images/flores-eternas.png"
+              alt="flores-eternas"
+              loading="lazy"
+              class="project-pic"
+            />
+            <h3 class="titulo">Proyecto Flores Eternas ecommerce</h3>
+            <p class="detalle-de-proyectos">
+                Aplicación de comercio electrónico en JavaScript para encontrar un catálogo y precios de flores eternas hechas a mano, el usuario cuenta con la opcion de filtrar el tipo de flor que quiera y agregarla al carrito.
+            </p>
+            <div class="botones">
+                <a href="https://juanconde025.github.io/PROYECTO-FILTRO_CONDEJUAN_MARTINEZDAVID/" target="_blank" class="boton-proyecto">
+                  <img src="assets/icons/codigo.png" alt="Ver Proyecto"> Ver proyecto
+                </a>
+                <a href="https://github.com/juanconde025/PROYECTO-FILTRO_CONDEJUAN_MARTINEZDAVID" target="_blank" class="boton-proyecto">
+                  <img src="assets/icons/github.png" alt="GitHub"> Ver en GitHub
+                </a>
+              </div>
+          </div>
+          <div class="contenedor-de-proyectos tarjeta-de-proyectos ">
+            <img
+              src="assets/images/gestor-recursos.png"
+              alt="gestor-recursos"
+              loading="lazy"
+              class="project-pic"
+            />
+            <h3 class="titulo">Gestor de Contenido</h3>
+            <p class="detalle-de-proyectos">
+                Sistema de gestión del contenido audiovisual o libros con JavaScript y MockAPI para mostrar imagenes del contenido existente, teniendo un registro del avance, finalización o programación para disfrutar de una película, serie o libro.
+            </p>
+            <div class="botones">
+                <a href="https://juanconde025.github.io/Proyecto_JavaScript_CondeJuan/" target="_blank" class="boton-proyecto">
+                  <img src="assets/icons/codigo.png" alt="Ver Proyecto"> Ver proyecto
+                </a>
+                <a href="https://github.com/juanconde025/Proyecto_JavaScript_CondeJuan" target="_blank" class="boton-proyecto">
+                  <img src="assets/icons/github.png" alt="GitHub"> Ver en GitHub
+                </a>
+              </div>
+          </div>
+          <div class="contenedor-de-proyectos tarjeta-de-proyectos">
+            <img
+              src="assets/images/SWAPI.png"
+              alt="SWAPI"
+              loading="lazy"
+              class="project-pic"
+            />
+            <h3 class="titulo">Star Wars API</h3>
+            <p class="detalle-de-proyectos">
+                Consumo de una API por medio de JavaScript puro, con informacion relacionada a personajes, planetas, películas, especies, vehiculos y naves de la saga Star Wars, con filtros en cada busqueda por su tipo.
+            </p>
+            <div class="botones">
+                <a href="https://josedanielcm.github.io/Proyecto_Javascript_CarvajalJose_CondeJuan/index.html" target="_blank" class="boton-proyecto">
+                  <img src="assets/icons/codigo.png" alt="Ver Proyecto"> Ver proyecto
+                </a>
+                <a href="https://github.com/JoseDanielCM/Proyecto_Javascript_CarvajalJose_CondeJuan" target="_blank" class="boton-proyecto">
+                  <img src="assets/icons/github.png" alt="GitHub"> Ver en GitHub
+                </a>
+              </div>
+          </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+       <p>© 2024 Juan Conde - Todos los derechos reservados.</p>
+       <div class="social-icons">
+           <a href="https://github.com/tu-perfil" target="_blank"><i class="fab fa-github"></i></a>
+           <a href="https://linkedin.com/in/tu-perfil" target="_blank"><i class="fab fa-linkedin"></i></a>
+       </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
