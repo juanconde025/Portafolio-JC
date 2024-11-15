@@ -7,7 +7,7 @@
 html{
     scroll-behavior: smooth;
 }
-/* MENU */
+
 .contenedor-header{
     background: #1e2326;
     position: fixed;
@@ -140,37 +140,23 @@ html{
 
 .inicio .redes {
     display: flex;
-    gap: 20px;
-}
-
-.inicio .redes a {
-    color: #fff;
-    font-size: 22px;
-    text-decoration: none;
-    background-color: #4e8e4d;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.inicio .redes a:hover {
-    background-color: #3a7b3e;
-    transform: scale(1.1);
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .inicio .redes a {
     display: inline-block;
     width: 50px;
     height: 50px;
-    margin: 10px;
+    position: relative; 
+    text-decoration: none;
+    z-index: 1; 
     transition: transform 0.3s ease;
 }
 
 .inicio .redes a img {
+    background-color: #4e8e4d;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -184,7 +170,7 @@ html{
     transform: scale(1.1);
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
     .inicio .redes a {
         width: 40px;
@@ -198,6 +184,7 @@ html{
         height: 35px;
     }
 }
+
 
 
 @media (max-width: 768px) {
@@ -244,236 +231,225 @@ html{
         font-size: 20px;
     }
 }
-.sobremi{
-    background-color: #1e2326;
+/* Fondo */
+.sobremi {
+    background: linear-gradient(to bottom, #1e2326, #15191c);
+    padding: 80px 20px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Elementos decorativos */
+.sobremi::before,
+.sobremi::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(78, 142, 77, 0.2);
+    border-radius: 50%;
+    z-index: 0;
+    animation: floating 6s infinite ease-in-out;
+}
+
+.sobremi::before {
+    top: -50px;
+    left: 10%;
+}
+
+.sobremi::after {
+    bottom: -50px;
+    right: 15%;
+    animation-delay: 3s;
+}
+
+/* Animación de flotación */
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+}
+
+/* Contenido */
+.sobremi .contenido-seccion {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+
+.sobremi h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+    animation: fadeInDown 1.2s ease-out;
+}
+
+.sobremi p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Animación de entrada */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botón */
+.sobremi .boton-cv {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #4e8e4d;
+    color: #4e8e4d;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 10;
+    transition: color 0.4s ease;
+}
+
+.sobremi .boton-cv:hover {
+    color: #fff;
+}
+
+.sobremi .boton-cv .overlay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #4e8e4d;
+    z-index: -1;
+    transition: left 0.4s ease;
+}
+
+.sobremi .boton-cv:hover .overlay {
+    left: 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .sobremi h2 {
+        font-size: 36px;
+    }
+    .sobremi p {
+        font-size: 16px;
+    }
+    .sobremi .boton-cv {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobremi {
+        padding: 50px 10px;
+    }
+    .sobremi h2 {
+        font-size: 28px;
+    }
+    .sobremi p {
+        font-size: 14px;
+    }
+}
+
+.boton-cv a {
+    text-decoration: none;
+    color: inherit;
+    display: block; 
+    width: 100%;
+    height: 100%;
+}
+
+
+/* SECCION S K I L L S */
+.skills {
+    background-color: #252A2E;
     color: #fff;
     padding: 50px 20px;
-}
-.sobremi .contenido-seccion{
-    max-width: 1100px;
-    margin: auto;
-}
-.sobremi h2{
-    font-size: 48px;
     text-align: center;
-    padding: 20px 0;
+}
 
+.skills h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #fff;
 }
-.sobremi .contenido-seccion p{
-    font: 18px;
-    line-height: 22px;
-    margin-bottom: 20px;
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-.sobremi .contenido-seccion p span{
-    color: #4e8e4d;
-    font-weight: bold;
-}
-.sobremi .fila{
-    display: flex;
-}
-.sobremi .fila .col
-{
-    width: 50%;
-}
-.sobremi .fila .col h3{
-    font-size: 28px;
-    margin-bottom: 25px;
-}
-.sobremi .fila .col ul{
-    list-style: none;
-}
-.sobremi .fila .col ul li{
-    margin: 12px 0;
-}
-.sobremi .fila .col ul li strong{
-    display: inline-block;
-    color: #4e8e4d;
-    width: 130px;
-}
-.sobremi .fila .col ul li span{
-    background-color: #4e8e4d;
-    padding: 3px;
-    font-weight: bold;
-    border-radius: 5px;
-}
-.sobremi .fila .col .contenedor-intereses{
-    display: flex;
-    flex-wrap: wrap;
-}
-.sobremi .fila .col .contenedor-intereses .interes{
-    width: 100px;
-    height: 100px;
-    background-color: #252A2E;
+
+.skill-card {
+    background-color:#4e8e4d;
     border-radius: 10px;
-    margin: 0 15px 15px 0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: .3s;
-}.sobremi .fila .col .contenedor-intereses .interes:hover{
-    background-color: #4e8e4d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-.sobremi .fila .col .contenedor-intereses .interes i{
-    font-size: 30px;
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.skill-card img {
+    width: 50px;
+    height: 50px;
     margin-bottom: 10px;
+    transition: transform 0.3s;
 }
-.sobremi button{
-    cursor: pointer;
-    background-color: transparent;
-    border: 2px solid #fff;
-    width: fit-content;
-    display: block;
-    margin: 20px auto;
-    padding: 10px 22px;
+
+.skill-card:hover img {
+    transform: scale(1.1);
+}
+
+.skill-card span {
     font-size: 16px;
-    color: #fff;
-    position: relative;
-    z-index: 10;
-}
-.sobremi button .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #4e8e4d;
-    z-index: -1;
-    transition: 1s;
-}
-.sobremi button:hover .overlay{
-    width: 100%;
-}
-/* SECCION S K I L L S */
-.skills{
-    background-color: #252A2E;
-    color: #fff;
-    padding: 50px 20px;
-}
-.skills .contenido-seccion{
-    max-width: 1100px;
-    margin: auto;
-}
-.skills h2{
-    font-size: 48px;
-    text-align: center;
-    padding: 20px 0;
-
-}
-.skills .fila{
-    display: flex;
-}
-.skills .fila .col{
-    width: 50%;
-    padding: 0 20px;
-}
-.skills .fila .col h3{
-    font-size: 28px;
-    margin-bottom: 25px;
-}
-.skills .skill > span{
     font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-}
-.skills .skill .barra-skill{
-    height: 8px;
-    width: 80%;
-    background-color: #131517;
-    position: relative;
-    margin-bottom: 30px;
-}
-.skills .skill .progreso{
-    background-color: #4e8e4d;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 8px;
-}
-.skills .skill .barra-skill span{
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    background-color: #4e8e4d;
-    border-radius: 50px;
-    line-height: 40px;
-    text-align: center;
-    top: -17px;
-    right: -15px;
-    font-size: 14px;
-}
-/* Estas clases se agregaran dinamicamente mediante javascript */
-.skills .skill .python{
-    width: 0%;
-    animation: 2s python forwards;
-}
-@keyframes python {
-    0%{width: 0%;}
-    100%{width: 100%;}
+    color: #fff;
 }
 
-.skills .skill .javascript{
-    width: 0%;
-    animation: 2s javascript forwards;
-}
-@keyframes javascript {
-    0%{width: 0%;}
-    100%{width: 100%;}
-}
-
-.skills .skill .java{
-    width: 0%;
-    animation: 2s java forwards;
-}
-@keyframes java {
-    0%{width: 0%;}
-    100%{width: 30%;}
-}
-
-.skills .skill .mysql{
-    width: 0%;
-    animation: 2s mysql forwards;
-}
-@keyframes mysql {
-    0%{width: 0%;}
-    100%{width: 100%;}
-}
-
-.skills .skill .html{
-    width: 0%;
-    animation: 2s html forwards;
-}
-@keyframes html {
-    0%{width: 0%;}
-    100%{width: 100%;}
-}
-
-.skills .skill .css{
-    width: 0%;
-    animation: 2s css forwards;
-}
-@keyframes css {
-    0%{width: 0%;}
-    100%{width: 100%;}
-}
-
-.skills .skill .git{
-    width: 0%;
-    animation: 2s git forwards;
-}
-@keyframes git {
-    0%{width: 0%;}
-    100%{width: 100%;}
-}
-
-.skills .skill .arduino{
-    width: 0%;
-    animation: 2s arduino forwards;
-}
-@keyframes arduino {
-    0%{width: 0%;}
-    100%{width: 90%;}
-}
 
 .proyectos {
     padding: 50px 20px;
@@ -618,7 +594,7 @@ footer .arriba{
     line-height: 50px;
     font-size: 18px;
 }
-/* SECCION RESPONSIVE */
+
 @media screen and (max-width:980px){
     nav{
         display: none;
