@@ -8,30 +8,30 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="icon" href="assets/icons/Logo-Personal.png" type="image/x-icon">  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Juan Conde | Desarrollador Junior Backend</title>
 </head>
 <body>
     <div class="contenedor-header">
         <header>
             <div class="logo">
-                <img src="assets/icons/Logo-Personal.png" alt="">
+                <img src="assets/icons/Logo-Personal.png" alt="Logo Personal">
             </div>
             <nav id="nav">
                 <ul>
                     <li><a href="#inicio" onclick="seleccionar()">Inicio</a></li>
                     <li><a href="#sobremi" onclick="seleccionar()">Sobre Mi</a></li>
                     <li><a href="#skills" onclick="seleccionar()">Skills</a></li>
-                    <li><a href="#curriculum" onclick="seleccionar()">Cv</a></li>
                     <li><a href="#proyectos" onclick="seleccionar()">Proyectos</a></li>
                     <li><a href="#contacto" onclick="seleccionar()">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-                <i class="fa-solid fa-bars">-</i>
+            <div class="nav-responsive">
+                <i class="fa-solid fa-bars"></i> 
             </div>
         </header>
     </div>
-
 
     <section id="inicio" class="inicio">
         <div class="contenido-banner">
@@ -63,7 +63,7 @@
             <p class="bio-texto">
                 Veo el sector tecnológico como un puente para la creación de nuevas ideas y aportes claves en diferentes campos de la sociedad. Me enfoco hacia el trabajo en equipo y la resolución de problemas generando así un análisis continuo y una interpretación clave para obtener resultados efectivos en los diversos proyectos en los que trabajo.
             </p>
-            <button class="boton-cv">
+            <button class="boton-cv" id="cv">
                 <a href="assets/cv/24-04-C3 - Juan David Conde Martínez - ESP.pdf" target="_blank">
                     Descargar CV <i class="fa-solid fa-download"></i>
                 </a>
@@ -116,10 +116,13 @@
         <div class="contenedor-de-proyectos">
           <div class="contenedor-de-proyectos tarjeta-de-proyectos">
             <img
-              src="assets/images/flores-eternas.png"
-              alt="flores-eternas"
+              src="assets/images/flores-eternas.jpg"
+              alt="Proyecto Flores Eternas ecommerce"
               loading="lazy"
               class="project-pic"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal"
+              data-video="assets\video\video-flores-eternas.mp4"
             />
             <h3 class="titulo">Proyecto Flores Eternas ecommerce</h3>
             <p class="detalle-de-proyectos">
@@ -134,12 +137,15 @@
                 </a>
               </div>
           </div>
-          <div class="contenedor-de-proyectos tarjeta-de-proyectos ">
+          <div class="contenedor-de-proyectos tarjeta-de-proyectos">
             <img
               src="assets/images/gestor-recursos.png"
-              alt="gestor-recursos"
+              alt="Gestor de Contenido"
               loading="lazy"
               class="project-pic"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal"
+              data-video="assets\video\video-gestor-contenido.mp4"
             />
             <h3 class="titulo">Gestor de Contenido</h3>
             <p class="detalle-de-proyectos">
@@ -157,13 +163,16 @@
           <div class="contenedor-de-proyectos tarjeta-de-proyectos">
             <img
               src="assets/images/SWAPI.png"
-              alt="SWAPI"
+              alt="Star Wars API"
               loading="lazy"
               class="project-pic"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal"
+              data-video="assets\video\video-swapi.mp4"
             />
             <h3 class="titulo">Star Wars API</h3>
             <p class="detalle-de-proyectos">
-                Consumo de una API por medio de JavaScript puro, con informacion relacionada a personajes, planetas, películas, especies, vehiculos y naves de la saga Star Wars, con filtros en cada busqueda por su tipo.
+                Consumo de una API por medio de JavaScript puro, con informacion relacionada a personajes, planetas, películas, especies, vehiculos y naves de la saga Star Wars, con filtros en cada busqueda por su tipo de personaje, raza, clima o tipo de nave.
             </p>
             <div class="botones">
                 <a href="https://josedanielcm.github.io/Proyecto_Javascript_CarvajalJose_CondeJuan/index.html" target="_blank" class="boton-proyecto">
@@ -175,8 +184,26 @@
               </div>
           </div>
         </div>
-    </section>
+      </section>
 
+      <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="projectModalLabel">Título del Proyecto</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="ratio ratio-16x9">
+                <iframe id="projectVideo" src="" title="Video del Proyecto" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+    
+      
 
     <footer class="footer">
        <p>© 2024 Juan Conde - Todos los derechos reservados.</p>
@@ -187,6 +214,7 @@
     </footer>
 
     <script src="assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
