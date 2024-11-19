@@ -661,43 +661,85 @@ nav ul {
     }
 }
 
-footer{
+.seccion-contacto {
     background-color: #252A2E;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.seccion-contacto h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.seccion-contacto .descripcion {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.formulario-contacto {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-grupo label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #4e8e4d;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background: #1a1d1f;
+    border: 1px solid #4e8e4d;
+    border-radius: 4px;
+}
+
+.form-grupo input::placeholder,
+.form-grupo textarea::placeholder {
+    color: #bbb;
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+    border-color: #4e8e4d;
+    outline: none;
+}
+
+.btn-enviar {
+    background-color: #4e8e4d;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #3c713a;
+}
+
+
+footer{
+    background-color:#1e2326;
     color: #fff;
     padding: 50px 0 30px 0;
     text-align: center;
-    position: relative;
     width: 100%;
-}
-footer .redes{
-    margin-bottom: 20px;
-}
-footer .redes a{
-    color: #fff;
-    display: inline-block;
-    text-decoration: none;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    margin: 40px 5px;
-    font-size: 20px;
-    transition: .3s;
-}
-footer .arriba{
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: #1CB698;
-    color: #fff;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -25px;
-    border-radius: 50%;
-    line-height: 50px;
-    font-size: 18px;
 }
 
 @media screen and (max-width:980px){
