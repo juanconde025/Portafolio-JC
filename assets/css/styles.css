@@ -407,7 +407,7 @@ nav ul {
 /* Responsivo */
 @media (max-width: 768px) {
     .sobremi h2 {
-        font-size: 36px;
+        font-size: 3rem;
     }
     .sobremi p {
         font-size: 16px;
