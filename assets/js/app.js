@@ -1,15 +1,27 @@
-const nav = document.getElementById('nav'); 
-const navMenu = nav.querySelector('ul'); 
-const navResponsive = document.querySelector('.nav-responsive'); 
+console.log("El archivo JS está cargado correctamente.");
 
-navResponsive.addEventListener('click', () => {
-    navMenu.classList.toggle('active'); 
+const burger = document.querySelector("#burger-menu");
+const ul = document.querySelector("nav ul");
+
+console.log("Elemento burger:", burger);
+console.log("Elemento ul:", ul);
+
+burger.addEventListener("click", () => {
+    console.log("Botón hamburguesa clicado");
+    ul.classList.toggle("show");
 });
 
-// Cerrar el menú al seleccionar un enlace
-function seleccionar() {
-    navMenu.classList.remove('active'); 
-}
+ 
+
+
+const scrollUp = document.querySelector("#scroll-up");
+scrollUp.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
 
 
 

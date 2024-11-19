@@ -53,34 +53,52 @@ html{
 .contenedor-header header nav ul li a:hover {
     color: #4e8e4d;
 }
-
-.nav-responsive {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
+  
+.menu-hamburguesa {
     color: #fff;
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
 }
 
+nav ul {
+    display: none; /* Escondemos el menú inicialmente */
+  }
+  
+  nav ul.show {
+    display: flex; /* Mostramos el menú cuando tiene la clase "show" */
+    flex-direction: column;
+    background: #1e2326;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+  }
+  
 @media (max-width: 768px) {
-    .nav-responsive {
-        display: flex;
+    .menu-hamburguesa {
+      display: block;
     }
-
-    nav#nav ul {
-        flex-direction: column;
-        display: none; 
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background: #1e2326;
+      padding: 10px;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
     }
-
-    nav#nav ul.active {
-        display: flex !important; 
-    }
-
-    nav#nav ul li {
-        margin: 10px 0;
+  
+    nav ul.show {
+      display: flex;
     }
 }
-
-
+  
 
 
 .inicio {
@@ -611,6 +629,18 @@ html{
 .ratio {
     max-width: 100%;
     height: auto;
+}
+
+.scroll-up {
+    position: fixed;
+    right: 0.5%;
+    bottom: 3%;
+    cursor: pointer;
+}
+  
+.up-arrow {
+    width: 3rem;
+    height: 3rem;
 }
 
 @media (max-width: 576px) {
