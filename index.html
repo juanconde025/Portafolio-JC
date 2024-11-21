@@ -24,7 +24,9 @@
             <ul>
               <li><a href="#inicio" class="nav-link">Inicio</a></li>
               <li><a href="#sobremi" class="nav-link">Sobre Mi</a></li>
+              <li><a href="#mision-vision" class="nav-link">Mision y Vision</a></li>
               <li><a href="#skills" class="nav-link">Skills</a></li>
+              <li><a href="#certificaciones" class="nav-link">Certificaciones</a></li>
               <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
               <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
@@ -74,6 +76,77 @@
         </div>
     </section>
 
+    <section class="mision-vision" id="mision-vision">
+        <h2 class="titulo-seccion">Misión y Visión</h2>
+        <div class="contenedor-mision-vision">
+          <!-- Tarjeta de Misión -->
+          <div class="tarjeta mision" data-bs-toggle="modal" data-bs-target="#modalMision">
+            <div class="icono">
+              <img src="assets/icons/mision.png" alt="Icono de Misión" class="icono-mision" />
+            </div>
+            <h3 class="subtitulo">Misión</h3>
+            <p class="descripcion">
+              Haz clic aquí
+            </p>
+          </div>
+     
+          <div class="tarjeta vision" data-bs-toggle="modal" data-bs-target="#modalVision">
+            <div class="icono">
+              <img src="assets/icons/vision.png" alt="Icono de Visión" class="icono-vision" />
+            </div>
+            <h3 class="subtitulo">Visión</h3>
+            <p class="descripcion">
+              Haz clic aquí
+            </p>
+          </div>
+        </div>
+      </section>
+      
+<div class="modal fade" id="modalMision" tabindex="-1" aria-labelledby="modalMisionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalMisionLabel">
+            <img src="assets/icons/mision.png" alt="Icono Misión" class="modal-icon" />
+            Misión
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="contenido-modal">
+            <p class="descripcion-modal">
+                Fomentar el desarrollo de soluciones tecnológicas innovadoras que sirvan como puente para generar ideas transformadoras y resolver problemas clave. A través del trabajo en equipo y un análisis continuo, busco aportar valor significativo a los proyectos en los que participo, impactando de manera positiva los diferentes campos de la sociedad.
+            </p>
+            <img src="assets/images/mision-ilustracion.png" alt="Ilustración de Misión" class="modal-ilustracion" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalVision" tabindex="-1" aria-labelledby="modalVisionLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalVisionLabel">
+            <img src="assets/icons/vision.png" alt="Icono Visión" class="modal-icon" />
+            Visión
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="contenido-modal">
+            <p class="descripcion-modal">
+                Convertirme en un referente en el sector tecnológico, promoviendo la creatividad, la colaboración y la innovación como pilares fundamentales para diseñar soluciones que impulsen el desarrollo social y profesional. Mi objetivo es construir un legado de impacto, donde cada proyecto contribuya al progreso y a la conexión entre tecnología y sociedad.
+            </p>
+            <img src="assets/images/vision-ilustracion.png" alt="Ilustración de Visión" class="modal-ilustracion" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+      
     <section class="skills" id="skills">
         <h2>Skills</h2>
         <div class="skills-grid">
@@ -112,7 +185,33 @@
         </div>
     </section>
     
-
+    <section class="certificaciones" id="certificaciones">
+        <h2 class="titulo-seccion">Certificaciones</h2>
+        <div class="contenedor-certificaciones">
+          <div class="tarjeta-certificacion">
+            <div class="imagen-wrapper">
+              <img src="assets/images/certificacion1.png" alt="Certificación 1" class="imagen-certificacion" />
+            </div>
+            <h3 class="subtitulo">Certificación 1</h3>
+            <p class="descripcion">Emitido por:</p>
+          </div>
+          <div class="tarjeta-certificacion">
+            <div class="imagen-wrapper">
+              <img src="assets/images/certificacion2.png" alt="Certificación 2" class="imagen-certificacion" />
+            </div>
+            <h3 class="subtitulo">Certificación 2</h3>
+            <p class="descripcion">Emitido por:</p>
+          </div>
+          <div class="tarjeta-certificacion">
+            <div class="imagen-wrapper">
+              <img src="assets/images/certificacion3.png" alt="Certificación 3" class="imagen-certificacion" />
+            </div>
+            <h3 class="subtitulo">Certificación 3</h3>
+            <p class="descripcion">Emitido por:</p>
+          </div>
+        </div>
+    </section>
+      
     <section class="proyectos" id="proyectos">
         <h2 class="titulo-de-proyectos">Proyectos</h2>
         <div class="contenedor-de-proyectos">
@@ -186,9 +285,9 @@
               </div>
           </div>
         </div>
-      </section>
+    </section>
 
-      <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header">
@@ -202,14 +301,15 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
  
-      <i class="scroll-up" id="scroll-up"
+    <i class="scroll-up" id="scroll-up"
       ><img
         src="assets/icons/flecha.png"
         class="socicon up-arrow"
         alt=""
-    /></i>
+       />
+    </i>
       
     <div id="contacto" class="seccion-contacto">
         <h2>Contacto</h2>

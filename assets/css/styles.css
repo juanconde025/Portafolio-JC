@@ -64,11 +64,11 @@ html{
 }
 
 nav ul {
-    display: none; /* Escondemos el menú inicialmente */
+    display: none; 
   }
   
   nav ul.show {
-    display: flex; /* Mostramos el menú cuando tiene la clase "show" */
+    display: flex; 
     flex-direction: column;
     background: #1e2326;
     padding: 10px;
@@ -277,7 +277,7 @@ nav ul {
         font-size: 20px;
     }
 }
-/* Fondo */
+
 .sobremi {
     background: linear-gradient(to bottom, #1e2326, #15191c);
     padding: 80px 20px;
@@ -286,7 +286,6 @@ nav ul {
     overflow: hidden;
 }
 
-/* Elementos decorativos */
 .sobremi::before,
 .sobremi::after {
     content: "";
@@ -310,7 +309,6 @@ nav ul {
     animation-delay: 3s;
 }
 
-/* Animación de flotación */
 @keyframes floating {
     0%, 100% {
         transform: translateY(0);
@@ -320,7 +318,6 @@ nav ul {
     }
 }
 
-/* Contenido */
 .sobremi .contenido-seccion {
     max-width: 800px;
     margin: 0 auto;
@@ -404,7 +401,6 @@ nav ul {
     left: 0;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     .sobremi h2 {
         font-size: 3rem;
@@ -438,8 +434,160 @@ nav ul {
     height: 100%;
 }
 
+.mision-vision {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1e2326, #4e8e4d);
+    text-align: center;
+  }
+  
+  .titulo-seccion {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+  
+  .contenedor-mision-vision {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .tarjeta {
+    background: #1e2326;
+    border: 2px solid #4e8e4d;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .tarjeta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .icono {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    position: relative;
+  }
+  
+  .icono-mision {
+    width: 100%;
+    animation: animarFlecha 3s infinite;
+  }
+  
+  .icono-vision {
+    width: 100%;
+    animation: parpadearOjo 2s infinite;
+  }
+  
+  .subtitulo {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .descripcion {
+    font-size: 16px;
+    color: #c9d6df;
+    line-height: 1.8;
+  }
+  
 
-/* SECCION S K I L L S */
+.modal-content {
+    background: linear-gradient(135deg, #1e2326, #4e8e4d);
+    color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  }
+  
+  .modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+  }
+  
+  .modal-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff  ;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .modal-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #4e8e4d;
+    padding: 5px;
+    background-color: #1e2326;
+  }
+  
+  .modal-body {
+    text-align: center;
+  }
+  
+  .contenido-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .descripcion-modal {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #c9d6df;
+    text-align: justify;
+    max-width: 600px;
+  }
+  
+  .modal-ilustracion {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .modal-ilustracion:hover {
+    transform: scale(1.05);
+  }
+  
+
+  @keyframes animarFlecha {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(10px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes parpadearOjo {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+   
 .skills {
     background-color: #252A2E;
     color: #fff;
@@ -496,6 +644,67 @@ nav ul {
     color: #fff;
 }
 
+.certificaciones {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1e2326, #4e8e4d);
+    text-align: center;
+  }
+  
+  .contenedor-certificaciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .tarjeta-certificacion {
+    background: #1e2326;
+    border: 2px solid #4e8e4d;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .tarjeta-certificacion:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .imagen-wrapper {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .imagen-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .tarjeta-certificacion:hover .imagen-wrapper {
+    transform: scale(1.1);
+  }
+  
+  .subtitulo {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .descripcion {
+    font-size: 16px;
+    color: #c9d6df;
+    line-height: 1.6;
+  }
+   
 
 .proyectos {
     padding: 50px 20px;
@@ -662,7 +871,7 @@ nav ul {
 }
 
 .seccion-contacto {
-    background-color: #252A2E;
+    background: linear-gradient(135deg, #1e2326, #4e8e4d);
     color: #fff;
     padding: 40px 20px;
     text-align: center;
@@ -693,7 +902,7 @@ nav ul {
     display: block;
     font-size: 1rem;
     margin-bottom: 5px;
-    color: #4e8e4d;
+    color: #fff;
 }
 
 .form-grupo input,
@@ -703,7 +912,7 @@ nav ul {
     font-size: 1rem;
     color: #fff;
     background: #1a1d1f;
-    border: 1px solid #4e8e4d;
+    border: 1px solid #fff;
     border-radius: 4px;
 }
 
