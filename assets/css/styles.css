@@ -312,20 +312,30 @@ nav ul.show {
 
 @media (max-width: 480px) {
   .inicio .contenido-banner {
+    padding: 30px;
+    max-width: 90%;
+    min-width: auto;
+    width: 100%; 
+    gap: 20px;
+    border-radius: 15px;
+    flex-direction: column; 
+    text-align: center; 
+  }
+  .inicio .contenido-banner {
     padding: 15px;
   }
 
   .inicio .contenedor-img img {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
   }
 
   .inicio .text-content h1 {
-    font-size: 22px;
+    font-size: 32px;
   }
 
   .inicio .text-content h2 {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .inicio .text-content p {
@@ -333,8 +343,8 @@ nav ul.show {
   }
 
   .inicio .redes a {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
   }
 }
 
