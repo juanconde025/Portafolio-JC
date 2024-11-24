@@ -1,17 +1,25 @@
-console.log("El archivo JS está cargado correctamente.");
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector("#burger-menu");
+  const navMenu = document.querySelector("nav ul");
+  const navLinks = document.querySelectorAll("nav ul li a");
 
-const burger = document.querySelector("#burger-menu");
-const ul = document.querySelector("nav ul");
+  if (burger && navMenu) {
+    burger.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
 
-console.log("Elemento burger:", burger);
-console.log("Elemento ul:", ul);
-
-burger.addEventListener("click", () => {
-    console.log("Botón hamburguesa clicado");
-    ul.classList.toggle("show");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        setTimeout(() => {
+          navMenu.classList.remove("show");
+        }, 150); 
+      });
+    });
+  } else {
+    console.error("Elementos no encontrados");
+  }
 });
 
- 
 document.addEventListener("DOMContentLoaded", () => {
   const words = ["Juan", "Creative", "Innovative", "Analytical", "Focused"];
   const textElement = document.getElementById("dynamic-text");

@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -36,6 +37,8 @@ html {
   list-style: none;
   padding: 0;
   margin: 0;
+  position: relative;
+  z-index: 5;
 }
 
 .contenedor-header header ul li {
@@ -60,42 +63,64 @@ html {
   border: 0;
   background-color: transparent;
   cursor: pointer;
-  display: none;
+  display: none; 
+  z-index: 10;
 }
 
 nav ul {
-  display: none;
+  display: flex;
+  gap: 20px;
+  margin-left: auto; 
 }
 
-nav ul.show {
+#nav-list.show {
   display: flex;
   flex-direction: column;
   background: #1e2326;
   padding: 10px;
-  position: absolute;
   top: 60px;
   right: 0;
   width: 100%;
+  position: absolute; 
+  z-index: 100; 
 }
 
 @media (max-width: 768px) {
   .menu-hamburguesa {
-    display: block;
+    display: block !important; 
   }
 
-  nav ul {
-    display: none;
+  #nav-list {
+    display: none; 
     flex-direction: column;
     background: #1e2326;
     padding: 10px;
-    position: absolute;
     top: 60px;
     right: 0;
     width: 100%;
+    position: absolute; 
+    z-index: 100;
   }
 
   nav ul.show {
     display: flex;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul li a {
+    font-size: 12px;
+  }
+
+  .logo img {
+    width: 40px;
+  }
+
+  .contenedor-header header ul li {
+    margin: 0 5px;
   }
 }
 
@@ -120,8 +145,8 @@ nav ul.show {
   background: linear-gradient(145deg, #232a2d, #1e2326);
   padding: 50px;
   max-width: 950px;
-  width: 58%; /* Garantiza que siempre tome el ancho completo del contenedor padre */
-  min-width: 700px; /* Fija un ancho mínimo para evitar que se encoja demasiado */
+  width: 58%; 
+  min-width: 700px; 
   gap: 50px;
   border-radius: 25px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px #4e8e4d;
@@ -229,15 +254,15 @@ nav ul.show {
 }
 
 .inicio .redes {
-  position: absolute; /* Posiciona en relación a su contenedor padre */
-  bottom: 50px; /* Ajusta la distancia desde el borde inferior */
-  left: 50%; /* Centra horizontalmente */
-  transform: translateX(-50%); /* Compensa el centrado */
+  position: absolute; 
+  bottom: 50px; 
+  left: 50%; 
+  transform: translateX(-50%); 
   display: flex;
   justify-content: center;
   gap: 15px;
-  z-index: 10; /* Asegura que las redes estén por encima de otros elementos */
-  pointer-events: all; /* Asegura que sean clickeables */
+  z-index: 2; 
+  pointer-events: all; 
 }
 
 .inicio .redes a {
@@ -410,7 +435,7 @@ nav ul.show {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  z-index: 10;
+  z-index: 0;
   position: relative;
 }
 
@@ -1072,71 +1097,3 @@ footer {
   width: 100%;
 }
 
-@media screen and (max-width: 980px) {
-  nav {
-    display: none;
-  }
-  .nav-responsive {
-    display: block;
-  }
-  nav.responsive {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 75px;
-    background-color: #252a2e;
-    width: 180px;
-  }
-  nav.responsive ul {
-    display: block !important;
-  }
-  nav.responsive ul li {
-    border-bottom: 1px solid #fff;
-    padding: 10px 0;
-  }
-}
-@media screen and (max-width: 700px) {
-  .sobremi .fila {
-    display: block;
-  }
-  .sobremi .fila .col {
-    width: fit-content;
-  }
-
-  .skills .fila {
-    display: block;
-  }
-  .skills .fila .col {
-    width: 100%;
-  }
-  .skills .fila .col .barra-skill {
-    width: 100%;
-  }
-
-  .curriculum .fila {
-    display: block;
-  }
-  .curriculum .fila .col {
-    width: 90%;
-  }
-  .curriculum .fila .derecha {
-    margin-left: 20px;
-  }
-
-  .portfolio .galeria {
-    display: block;
-    width: 100%;
-  }
-  .portfolio .galeria .proyecto {
-    max-width: 100%;
-  }
-  .portfolio .galeria .proyecto img {
-    width: 100%;
-  }
-  .contacto .fila {
-    display: block;
-  }
-  .contacto .fila .col {
-    width: 100%;
-  }
-}
