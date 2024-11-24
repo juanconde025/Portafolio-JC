@@ -118,8 +118,10 @@ nav ul.show {
   display: flex;
   align-items: center;
   background: linear-gradient(145deg, #232a2d, #1e2326);
-  padding: 60px;
+  padding: 50px;
   max-width: 950px;
+  width: 58%; /* Garantiza que siempre tome el ancho completo del contenedor padre */
+  min-width: 700px; /* Fija un ancho mínimo para evitar que se encoja demasiado */
   gap: 50px;
   border-radius: 25px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px #4e8e4d;
@@ -127,6 +129,7 @@ nav ul.show {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   overflow: hidden;
 }
+
 
 .inicio .contenido-banner::before,
 .inicio .contenido-banner::after,
@@ -202,6 +205,7 @@ nav ul.show {
 .inicio .text-content {
   text-align: left;
   max-width: 600px;
+  position: relative; 
 }
 
 .inicio .text-content h1 {
@@ -225,10 +229,15 @@ nav ul.show {
 }
 
 .inicio .redes {
+  position: absolute; /* Posiciona en relación a su contenedor padre */
+  bottom: 50px; /* Ajusta la distancia desde el borde inferior */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Compensa el centrado */
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-top: 20px;
+  z-index: 10; /* Asegura que las redes estén por encima de otros elementos */
+  pointer-events: all; /* Asegura que sean clickeables */
 }
 
 .inicio .redes a {
@@ -256,29 +265,28 @@ nav ul.show {
   transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-  .inicio .redes a {
-    width: 40px;
-    height: 40px;
-  }
-}
 
-@media (max-width: 480px) {
-  .inicio .redes a {
-    width: 35px;
-    height: 35px;
-  }
-}
 
 @media (max-width: 768px) {
   .inicio .contenido-banner {
-    flex-direction: column;
     padding: 30px;
+    max-width: 90%;
+    min-width: auto;
+    width: 100%; 
     gap: 20px;
+    border-radius: 15px;
+    flex-direction: column; 
+    text-align: center; 
+  }
+
+  .inicio .contenedor-img img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
   }
 
   .inicio .text-content h1 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .inicio .text-content h2 {
@@ -286,18 +294,34 @@ nav ul.show {
   }
 
   .inicio .text-content p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
-  .inicio .contenedor-img img {
-    width: 150px;
-    height: 150px;
+  .inicio .redes {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+  }
+
+  .inicio .redes a {
+    width: 40px;
+    height: 40px;
   }
 }
 
 @media (max-width: 480px) {
+  .inicio .contenido-banner {
+    padding: 15px;
+  }
+
+  .inicio .contenedor-img img {
+    width: 80px;
+    height: 80px;
+  }
+
   .inicio .text-content h1 {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .inicio .text-content h2 {
@@ -305,15 +329,31 @@ nav ul.show {
   }
 
   .inicio .text-content p {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .inicio .redes a {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+    width: 30px;
+    height: 30px;
   }
 }
+
+#dynamic-text {
+  font-weight: bold;
+  color: #4e8e4d;
+  border-right: 2px solid #4e8e4d;
+  animation: blink-cursor 0.7s step-end infinite;
+}
+
+@keyframes blink-cursor {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4e8e4d;
+  }
+}
+
 
 .sobremi {
   background: linear-gradient(to bottom, #1e2326, #15191c);

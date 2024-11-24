@@ -12,7 +12,37 @@ burger.addEventListener("click", () => {
 });
 
  
+document.addEventListener("DOMContentLoaded", () => {
+  const words = ["Juan", "Creative", "Innovative", "Analytical", "Focused"];
+  const textElement = document.getElementById("dynamic-text");
+  let wordIndex = 0;
+  let letterIndex = 0;
+  let isDeleting = false;
 
+  function typeEffect() {
+    const currentWord = words[wordIndex];
+    if (isDeleting) {
+      letterIndex--;
+    } else {
+      letterIndex++;
+    }
+
+    textElement.textContent = currentWord.slice(0, letterIndex);
+
+    if (!isDeleting && letterIndex === currentWord.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1000);
+    } else if (isDeleting && letterIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length; 
+      setTimeout(typeEffect, 500); 
+    } else {
+      setTimeout(typeEffect, isDeleting ? 100 : 200); 
+    }
+  }
+
+  typeEffect();
+});
 
 const scrollUp = document.querySelector("#scroll-up");
 scrollUp.addEventListener("click", () => {
