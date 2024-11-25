@@ -3,11 +3,11 @@
 ## Tabla de Contenido
 | Índice | Título  |
 |--|--|
-| 1. | [Descripción](#descripcion) |
-| 2. | [Características Principales](#caracteristicas-principales) |
-| 3. | [Tecnologías Utilizadas](#tecnologias-utilizadas) |
-| 4. | [Instrucciones de Ejecución](#instrucciones-de-ejecucion) |
-| 5. | [Estructura](#estructura) |
+| 1. | [Descripción](#descripción-🚀) |
+| 2. | [Características Principales](#características-principales-🧰) |
+| 3. | [Tecnologías Utilizadas](#tecnologías-utilizadas-🛠️) |
+| 4. | [Instrucciones de Ejecución](#instrucciones-de-ejecución-📂) |
+| 5. | [Estructura](#estructura-📋) |
 
 ---
 
