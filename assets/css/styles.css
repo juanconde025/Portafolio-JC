@@ -549,7 +549,7 @@ nav ul {
 
 .mision-vision {
   padding: 60px 20px;
-  background: linear-gradient(135deg, #1e2326, #4e8e4d);
+  background: linear-gradient(to bottom, #1e2326, #4e8e4d);
   text-align: center;
 }
 
@@ -784,7 +784,7 @@ nav ul {
 
 .certificaciones {
   padding: 60px 20px;
-  background: linear-gradient(135deg, #1e2326, #4e8e4d);
+  background: linear-gradient(to bottom, #1e2326, #4e8e4d);
   text-align: center;
 }
 
@@ -855,9 +855,64 @@ nav ul {
   text-decoration: none;
 }
 
+.contenedor-servicios {
+  padding: 60px 20px;
+  background: linear-gradient(
+      to bottom,
+      rgba(30, 35, 38, 1),
+      #4e8e4d
+    );
+  color: #fff;
+  text-align: center;
+}
+
+.titulo-seccion {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #fff; 
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.tarjeta-servicio {
+  background-color: #2a3135;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #4e8e4d;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-servicio:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.icono-servicio {
+  width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.tarjeta-servicio h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fff; 
+}
+
+.tarjeta-servicio p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
 .proyectos {
   padding: 50px 20px;
-  background-color: #1e2326;
+  background: #252a2e;
   text-align: center;
 }
 
@@ -1019,7 +1074,7 @@ nav ul {
 }
 
 .seccion-contacto {
-  background: linear-gradient(135deg, #1e2326, #4e8e4d);
+  background: linear-gradient(to right, #1e2326, #4e8e4d);
   color: #fff;
   padding: 40px 20px;
   text-align: center;
