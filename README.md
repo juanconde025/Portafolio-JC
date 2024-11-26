@@ -25,6 +25,7 @@ Este proyecto es una **página web personal** diseñada para mostrar informació
    - **Misión y Visión**: Mis objetivos y motivaciones personales.
    - **Habilidades**: Lista de tecnologías y herramientas que manejo.
    - **Certificaciones**: Logros y certificaciones relevantes.
+   - **Servicios**: Servicios que ofrezco como programador
    - **Proyectos**: Portafolio con ejemplos de trabajos realizados.
    - **Contacto**: Formulario para comunicación directa.
 
@@ -74,7 +75,8 @@ B --> D(Sobre mí)
 B --> E(Misión y Visión)
 B --> F(Habilidades)
 B --> G(Certificaciones)
-B --> H(Proyectos)
-B --> I(Contacto)
-A --Navegación--> J(Menú Hamburguesa)
+B --> H(Servicios)
+B --> I(Proyectos)
+B --> J(Contacto)
+A --Navegación--> K(Menú Hamburguesa)
 ```
